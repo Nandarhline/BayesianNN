@@ -2,6 +2,8 @@
 # $ conda create --name <env> --file <this file> python==3.8.3
 # platform: win-64
 ipython==7.16.1
+ipykernel==5.3.2
+ipython_genutils==0.2.0
 keras==2.7.0
 keras-preprocessing==1.1.2
 matplotlib==3.2.2
