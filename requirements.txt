@@ -1,8 +1,6 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-h5py==2.10.0
-hdf5==1.10.4
 ipykernel==5.3.2
 ipython==7.16.1
 ipython_genutils==0.2.0
