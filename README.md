@@ -1,5 +1,5 @@
-# BayesianNN
-Farm-wide virtual load monitoring for offshore wind structures via Bayesian neural networks
+# Farm-wide virtual load monitoring for offshore wind structures via Bayesian neural networks
+
 
 ## Tutorial
 You can practice through a simple example provided in a tutorial. Please access via Binder and enjoy!
