@@ -15,7 +15,7 @@ class Pbnn:
             else "Normal"
         self.learn_all_params = config["learn_all_params"] if config.get("learn_all_params") is not None\
             else True
-        self.fixed_param = config["fixed_param"] if config.get("fixed_param") is False\
+        self.fixed_param = config["fixed_param"] if config.get("learn_all_params") is False\
             else None
         
 
