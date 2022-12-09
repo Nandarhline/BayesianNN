@@ -127,7 +127,20 @@ class Pbnn:
 
 
     def modeluq_bnn(self, Xtest, nsim=100):
-        if self.output_dist == "Normal":
+        if self.output_dist == "Weibull":
+            shapeY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
+            scaleY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
+            for i in range(nsim):
+                prediction_distribution = self.model(Xtest)
+                shapeY[:,:,i] = prediction_distribution.concentration.numpy()
+                scaleY[:,:,i] = prediction_distribution.scale.numpy()
+            Mean_shapeY = np.mean(shapeY, axis=2)
+            Stdv_shapeY = np.std(shapeY, axis=2)
+            Mean_scaleY = np.mean(scaleY, axis=2)
+            Stdv_scaleY = np.std(scaleY, axis=2)
+            return Mean_shapeY, Stdv_shapeY, Mean_scaleY, Stdv_scaleY
+    
+        elif self.output_dist == "Normal":
             muY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             sigmaY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             for i in range(nsim):
@@ -138,5 +151,4 @@ class Pbnn:
             Stdv_muY = np.std(muY, axis=2)
             Mean_sigmaY = np.mean(sigmaY, axis=2)
             Stdv_sigmaY = np.std(sigmaY, axis=2)
-        return Mean_muY, Stdv_muY, Mean_sigmaY, Stdv_sigmaY
-
+            return Mean_muY, Stdv_muY, Mean_sigmaY, Stdv_sigmaY
