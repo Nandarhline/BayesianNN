@@ -2,7 +2,7 @@
 
 
 ## Tutorial
-You can practice through a simple example provided in a tutorial. Please access via Binder and enjoy!
+You can practice through simple tutorials provided in the folder "Introduction_to_PBNNs". Please access via Binder and enjoy!
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Nandarhline/BayesianNN.git/master)
 
 ## Citation
