@@ -179,3 +179,4 @@ dependencies:
     - threadpoolctl==3.1.0
     - werkzeug==2.2.2
     - wrapt==1.14.1
+prefix: C:\Users\Administrateur\anaconda3\envs\Bayes
