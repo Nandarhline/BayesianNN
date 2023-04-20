@@ -2,4 +2,4 @@ name: bnn
 channels:
   - conda-forge
 dependencies:
-  - python==3.8.3
+  - python=3.8
