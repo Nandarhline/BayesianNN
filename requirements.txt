@@ -2,6 +2,7 @@
 # $ conda create --name <env> --file <this file> 
 # platform: win-64
 colorama
+chardet
 h5py
 ipython
 ipykernel
