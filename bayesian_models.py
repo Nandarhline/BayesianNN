@@ -144,6 +144,7 @@ class Pbnn:
             muY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             sigmaY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             for i in range(nsim):
+                Xtest = np.array(Xtest)
                 prediction_distribution = self.model(Xtest)
                 muY[:,:,i] = prediction_distribution.loc.numpy()
                 sigmaY[:,:,i] = prediction_distribution.scale.numpy()
