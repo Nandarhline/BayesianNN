@@ -131,6 +131,7 @@ class Pbnn:
             shapeY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             scaleY = np.zeros([len(Xtest), self.n_outfeatures, nsim])
             for i in range(nsim):
+                Xtest = np.array(Xtest)
                 prediction_distribution = self.model(Xtest)
                 shapeY[:,:,i] = prediction_distribution.concentration.numpy()
                 scaleY[:,:,i] = prediction_distribution.scale.numpy()
