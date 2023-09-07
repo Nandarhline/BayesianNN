@@ -110,7 +110,7 @@ class Pbnn:
     def test_bnn(self, Xtest, nsim=100):
         Y = np.zeros([len(Xtest), self.n_outfeatures, nsim])
         for i in range(nsim):
-            Y[:,:,i] = self.model.predict(Xtest)
+            Y[:,:,i] = self.model.predict(Xtest, verbose=0)
             Mean_Y = np.mean(Y, axis=2)
             Stdv_Y = np.std(Y, axis=2)
         return Mean_Y, Stdv_Y
