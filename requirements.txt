@@ -16,6 +16,6 @@ scikit-learn
 scipy
 tensorflow
 tensorflow-probability
-
+tensorflow-probability[tf]
 
 
